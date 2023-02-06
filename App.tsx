@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Image, Text, TextInput, View} from 'react-native';
 
 const App = () => {
@@ -10,6 +10,8 @@ const App = () => {
       <Text>Yogo</Text>
       <ImageProfile />
       <TextInput style={{borderWidth: 1}} />
+      <BoxGreen />
+      <Profile />
     </View>
   );
 };
@@ -26,5 +28,29 @@ const ImageProfile = () => {
     />
   );
 };
+
+class BoxGreen extends Component {
+  render() {
+    return <Text>ini komponen dari class BoxGreen</Text>;
+  }
+}
+
+class Profile extends Component {
+  render() {
+    return (
+      <View>
+        <Image
+          source={{
+            uri: 'https://img.freepik.com/free-vector/illustration-character-civil-servants-indonesia-wearing-work-uniforms_10045-683.jpg?size=338&ext=jpg',
+            width: 300,
+            height: 300,
+          }}
+          style={{borderRadius:150}}
+        />
+        <Text style={{textAlign: 'center'}}>ini Gambar</Text>
+      </View>
+    );
+  }
+}
 
 export default App;
